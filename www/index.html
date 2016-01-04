@@ -46,7 +46,7 @@
             app.initialize();
 			document.addEventListener("deviceready", onDeviceReady, false);
 			function onDeviceReady() {
-				alert('ready');
+				//alert('ready');
 			    window.open = cordova.InAppBrowser.open;
 			}
 			
@@ -57,16 +57,16 @@
       var authen_win=window.open('http://gpass-bird50.rhcloud.com/passport/irrigationstructure/login/','_blank','location=yes');
 	  
 	   authen_win.addEventListener('loadstart', function() {
-		   alert('load start');
+		 //  alert('load start');
 	   });
 	  //credit -->http://stackoverflow.com/questions/15191793/window-close-equivalent-in-phonegap-with-inappbrowser/15981972#15981972
 	  authen_win.addEventListener('loadstop', function(event) {
 		  
-	      alert('loadstop   stop'+event.url);
-		  /*if (event.url.match("http://gpass-bird50.rhcloud.com/passport/irrigationstructure/close")) {
-			  alert('macth');
-				  ref.close();
-		      }*/
+	    //  alert('loadstop   stop'+event.url);
+		  if (event.url.match("http://gpass-bird50.rhcloud.com/passport/irrigationstructure/close")) {
+			  //alert('macth');
+				  authen_win.close();
+		      }
 	  });
 	  
 	   //window.location.href="http://gpass-bird50.rhcloud.com/passport/irrigationstructure/login/";
