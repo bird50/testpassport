@@ -60,7 +60,7 @@
 		   alert('load start');
 	   });
 	  //credit -->http://stackoverflow.com/questions/15191793/window-close-equivalent-in-phonegap-with-inappbrowser/15981972#15981972
-	  authen_win.addEventListener('loadstop', function() {
+	  authen_win.addEventListener('loadstop', function(event) {
 		  
 	      alert('loadstop   stop'+event.url);
 		  /*if (event.url.match("http://gpass-bird50.rhcloud.com/passport/irrigationstructure/close")) {
